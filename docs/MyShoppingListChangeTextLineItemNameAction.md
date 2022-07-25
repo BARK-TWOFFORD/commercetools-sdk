@@ -1,0 +1,9 @@
+# CommercetoolsSdk::MyShoppingListChangeTextLineItemNameAction
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**action** | **String** |  | [optional] 
+**text_line_item_id** | **String** |  | [optional] 
+**name** | [**LocalizedString**](LocalizedString.md) |  | [optional] 
+

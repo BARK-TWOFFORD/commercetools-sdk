@@ -1,0 +1,23 @@
+# CommercetoolsSdk::ReviewStateTransitionMessage
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**id** | **String** |  | [optional] 
+**version** | **Integer** |  | [optional] 
+**created_at** | **String** |  | [optional] 
+**last_modified_at** | **String** |  | [optional] 
+**last_modified_by** | [**LastModifiedBy**](LastModifiedBy.md) |  | [optional] 
+**created_by** | [**CreatedBy**](CreatedBy.md) |  | [optional] 
+**sequence_number** | **Integer** |  | [optional] 
+**resource** | [**Reference**](Reference.md) |  | [optional] 
+**resource_version** | **Integer** |  | [optional] 
+**type** | **String** |  | [optional] 
+**resource_user_provided_identifiers** | [**UserProvidedIdentifiers**](UserProvidedIdentifiers.md) |  | [optional] 
+**old_state** | [**StateReference**](StateReference.md) |  | [optional] 
+**new_state** | [**StateReference**](StateReference.md) |  | [optional] 
+**old_included_in_statistics** | **BOOLEAN** |  | [optional] 
+**new_included_in_statistics** | **BOOLEAN** |  | [optional] 
+**target** | [**Reference**](Reference.md) |  | [optional] 
+**force** | **BOOLEAN** |  | [optional] 
+
