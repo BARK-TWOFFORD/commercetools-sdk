@@ -148,48 +148,48 @@ module CommercetoolsSdk
     # Attribute type mapping.
     def self.openapi_types
       {
-        :'id' => :'',
-        :'version' => :'',
-        :'created_at' => :'',
-        :'last_modified_at' => :'',
-        :'last_modified_by' => :'',
-        :'created_by' => :'',
-        :'completed_at' => :'',
-        :'order_number' => :'',
-        :'customer_id' => :'',
-        :'customer_email' => :'',
-        :'anonymous_id' => :'',
-        :'store' => :'',
-        :'line_items' => :'',
-        :'custom_line_items' => :'',
-        :'total_price' => :'',
-        :'taxed_price' => :'',
-        :'shipping_address' => :'',
-        :'billing_address' => :'',
-        :'tax_mode' => :'',
-        :'tax_rounding_mode' => :'',
-        :'customer_group' => :'',
-        :'country' => :'',
-        :'order_state' => :'',
-        :'state' => :'',
-        :'shipment_state' => :'',
-        :'payment_state' => :'',
-        :'shipping_info' => :'',
-        :'sync_info' => :'',
-        :'return_info' => :'',
-        :'discount_codes' => :'',
-        :'last_message_sequence_number' => :'',
-        :'cart' => :'',
-        :'quote' => :'',
-        :'custom' => :'',
-        :'payment_info' => :'',
-        :'locale' => :'',
-        :'inventory_mode' => :'',
-        :'origin' => :'',
-        :'tax_calculation_mode' => :'',
-        :'shipping_rate_input' => :'',
-        :'item_shipping_addresses' => :'',
-        :'refused_gifts' => :''
+        :'id' => :'Object',
+        :'version' => :'Object',
+        :'created_at' => :'Object',
+        :'last_modified_at' => :'Object',
+        :'last_modified_by' => :'Object',
+        :'created_by' => :'Object',
+        :'completed_at' => :'Object',
+        :'order_number' => :'Object',
+        :'customer_id' => :'Object',
+        :'customer_email' => :'Object',
+        :'anonymous_id' => :'Object',
+        :'store' => :'Object',
+        :'line_items' => :'Object',
+        :'custom_line_items' => :'Object',
+        :'total_price' => :'Object',
+        :'taxed_price' => :'Object',
+        :'shipping_address' => :'Object',
+        :'billing_address' => :'Object',
+        :'tax_mode' => :'Object',
+        :'tax_rounding_mode' => :'Object',
+        :'customer_group' => :'Object',
+        :'country' => :'Object',
+        :'order_state' => :'Object',
+        :'state' => :'Object',
+        :'shipment_state' => :'Object',
+        :'payment_state' => :'Object',
+        :'shipping_info' => :'Object',
+        :'sync_info' => :'Object',
+        :'return_info' => :'Object',
+        :'discount_codes' => :'Object',
+        :'last_message_sequence_number' => :'Object',
+        :'cart' => :'Object',
+        :'quote' => :'Object',
+        :'custom' => :'Object',
+        :'payment_info' => :'Object',
+        :'locale' => :'Object',
+        :'inventory_mode' => :'Object',
+        :'origin' => :'Object',
+        :'tax_calculation_mode' => :'Object',
+        :'shipping_rate_input' => :'Object',
+        :'item_shipping_addresses' => :'Object',
+        :'refused_gifts' => :'Object'
       }
     end
 
@@ -213,9 +213,6 @@ module CommercetoolsSdk
         end
         h[k.to_sym] = v
       }
-
-      # call parent's initialize
-      super(attributes)
 
       if attributes.key?(:'id')
         self.id = attributes[:'id']
@@ -486,7 +483,6 @@ module CommercetoolsSdk
     # @return [Object] Returns the model itself
     def build_from_hash(attributes)
       return nil unless attributes.is_a?(Hash)
-      super(attributes)
       self.class.openapi_types.each_pair do |key, type|
         if type =~ /\AArray<(.*)>/i
           # check to ensure the input is an array given that the attribute
