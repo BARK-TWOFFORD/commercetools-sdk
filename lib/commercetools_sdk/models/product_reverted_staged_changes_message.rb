@@ -95,7 +95,7 @@ module CommercetoolsSdk
       }
 
       # call parent's initialize
-      super(attributes)
+      
 
       if attributes.key?(:'id')
         self.id = attributes[:'id']
@@ -204,7 +204,7 @@ module CommercetoolsSdk
     # @return [Object] Returns the model itself
     def build_from_hash(attributes)
       return nil unless attributes.is_a?(Hash)
-      super(attributes)
+      
       self.class.openapi_types.each_pair do |key, type|
         if type =~ /\AArray<(.*)>/i
           # check to ensure the input is an array given that the attribute
