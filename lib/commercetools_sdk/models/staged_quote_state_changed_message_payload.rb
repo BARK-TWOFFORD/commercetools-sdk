@@ -58,7 +58,7 @@ module CommercetoolsSdk
         h[k.to_sym] = v
       }
 
-      # call parent's initialize
+      
       
 
       if attributes.key?(:'type')
