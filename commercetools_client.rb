@@ -5,15 +5,16 @@ class CommercetoolsClient
   attr_accessor :api
 
   def initialize
-    api = CommercetoolsSdk::DefaultApi.new
-    client = api.api_client
-    client.default_headers = { "Content-Type" => "application/json" }
-    config = CommercetoolsSdk::Configuration.new
-    config.host = "api.us-central1.gcp.commercetools.com"
-    config.access_token = CommercetoolsClient.access_token
-    config.base_path = "/"
-    config.debugging = true
-    client.config = config
+    config = CommercetoolsSdk::Configuration.new.tap do |config|
+      config.host = "api.us-central1.gcp.commercetools.com"
+      config.access_token = CommercetoolsClient.access_token
+      config.base_path = "/"
+    end
+    
+    api = CommercetoolsSdk::DefaultApi.new.tap do |api|
+      api.api_client.default_headers = { "Content-Type" => "application/json" }
+      api.api_client.config = config
+    end
     @api = api
   end
 
@@ -31,6 +32,6 @@ class CommercetoolsClient
   end
 
   def self.access_token
-    "VZmoyaTU04SmQ6zcLbaTDdhq0mud-8WQ"
+    "4Ukaz7gX-t15i3CqYZPVi1hn-q21Sxj1"
   end
 end
