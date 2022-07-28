@@ -98,32 +98,32 @@ module CommercetoolsSdk
     # Attribute type mapping.
     def self.openapi_types
       {
-        'id': :'',
-        'key': :'',
-        'country': :'',
-        'title': :'',
-        'salutation': :'',
-        'first_name': :'',
-        'last_name': :'',
-        'street_name': :'',
-        'street_number': :'',
-        'additional_street_info': :'',
-        'postal_code': :'',
-        'city': :'',
-        'region': :'',
-        'state': :'',
-        'company': :'',
-        'department': :'',
-        'building': :'',
-        'apartment': :'',
-        'p_o_box': :'',
-        'phone': :'',
-        'mobile': :'',
-        'email': :'',
-        'fax': :'',
-        'additional_address_info': :'',
-        'external_id': :'',
-        'custom': :''
+        'id': :'Object',
+        'key': :'Object',
+        'country': :'Object',
+        'title': :'Object',
+        'salutation': :'Object',
+        'first_name': :'Object',
+        'last_name': :'Object',
+        'street_name': :'Object',
+        'street_number': :'Object',
+        'additional_street_info': :'Object',
+        'postal_code': :'Object',
+        'city': :'Object',
+        'region': :'Object',
+        'state': :'Object',
+        'company': :'Object',
+        'department': :'Object',
+        'building': :'Object',
+        'apartment': :'Object',
+        'p_o_box': :'Object',
+        'phone': :'Object',
+        'mobile': :'Object',
+        'email': :'Object',
+        'fax': :'Object',
+        'additional_address_info': :'Object',
+        'external_id': :'Object',
+        'custom': :'Object'
       }
     end
 
@@ -399,7 +399,7 @@ module CommercetoolsSdk
     # Returns the object in the form of hash
     # @return [Hash] Returns the object in the form of hash
     def to_hash
-      hash = super
+      hash = {}
       self.class.attribute_map.each_pair do |attr, param|
         value = self.send(attr)
         if value.nil?
