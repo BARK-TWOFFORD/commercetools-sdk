@@ -14235,8 +14235,8 @@ module CommercetoolsSdk
       form_params = opts[:form_params] || {}
 
       # http body (model)
-      post_body = opts[:body] || @api_client.object_to_http_body(opts[:body])
-
+      post_body = @api_client.object_to_http_body(opts[:body])
+      
       return_type = opts[:return_type] || 'Order'
 
       auth_names = opts[:auth_names] || ['oauth_2_0']
