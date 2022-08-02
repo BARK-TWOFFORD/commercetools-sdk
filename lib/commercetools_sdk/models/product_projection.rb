@@ -86,28 +86,28 @@ module CommercetoolsSdk
     # Attribute type mapping.
     def self.openapi_types
       {
-        'id': :'',
-        'version': :'',
-        'created_at': :'',
-        'last_modified_at': :'',
-        'key': :'',
-        'product_type': :'',
-        'name': :'',
-        'description': :'',
-        'slug': :'',
-        'categories': :'',
-        'category_order_hints': :'',
-        'meta_title': :'',
-        'meta_description': :'',
-        'meta_keywords': :'',
-        'search_keywords': :'',
-        'has_staged_changes': :'',
-        'published': :'',
-        'master_variant': :'',
-        'variants': :'',
-        'tax_category': :'',
-        'state': :'',
-        'review_rating_statistics': :''
+        'id': :'Object',
+        'version': :'Object',
+        'created_at': :'Object',
+        'last_modified_at': :'Object',
+        'key': :'Object',
+        'product_type': :'Object',
+        'name': :'Object',
+        'description': :'Object',
+        'slug': :'Object',
+        'categories': :'Object',
+        'category_order_hints': :'Object',
+        'meta_title': :'Object',
+        'meta_description': :'Object',
+        'meta_keywords': :'Object',
+        'search_keywords': :'Object',
+        'has_staged_changes': :'Object',
+        'published': :'Object',
+        'master_variant': :'Object',
+        'variants': :'Object',
+        'tax_category': :'Object',
+        'state': :'Object',
+        'review_rating_statistics': :'Object'
       }
     end
 
@@ -367,7 +367,7 @@ module CommercetoolsSdk
     # Returns the object in the form of hash
     # @return [Hash] Returns the object in the form of hash
     def to_hash
-      hash = super
+      hash = {}
       self.class.attribute_map.each_pair do |attr, param|
         value = self.send(attr)
         if value.nil?

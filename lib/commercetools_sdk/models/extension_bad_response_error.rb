@@ -35,11 +35,11 @@ module CommercetoolsSdk
     # Attribute type mapping.
     def self.openapi_types
       {
-        'code': :'',
-        'message': :'',
-        'localized_message': :'',
-        'extension_extra_info': :'',
-        'error_by_extension': :''
+        'code': :'Object',
+        'message': :'Object',
+        'localized_message': :'Object',
+        'extension_extra_info': :'Object',
+        'error_by_extension': :'Object'
       }
     end
 
@@ -210,7 +210,7 @@ module CommercetoolsSdk
     # Returns the object in the form of hash
     # @return [Hash] Returns the object in the form of hash
     def to_hash
-      hash = super
+      hash = {}
       self.class.attribute_map.each_pair do |attr, param|
         value = self.send(attr)
         if value.nil?

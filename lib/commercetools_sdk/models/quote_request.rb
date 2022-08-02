@@ -107,35 +107,35 @@ module CommercetoolsSdk
     # Attribute type mapping.
     def self.openapi_types
       {
-        'id': :'',
-        'version': :'',
-        'created_at': :'',
-        'last_modified_at': :'',
-        'key': :'',
-        'last_modified_by': :'',
-        'created_by': :'',
-        'quote_request_state': :'',
-        'comment': :'',
-        'customer': :'',
-        'customer_group': :'',
-        'store': :'',
-        'line_items': :'',
-        'custom_line_items': :'',
-        'total_price': :'',
-        'taxed_price': :'',
-        'shipping_address': :'',
-        'billing_address': :'',
-        'inventory_mode': :'',
-        'tax_mode': :'',
-        'tax_rounding_mode': :'',
-        'tax_calculation_mode': :'',
-        'country': :'',
-        'shipping_info': :'',
-        'payment_info': :'',
-        'shipping_rate_input': :'',
-        'item_shipping_addresses': :'',
-        'direct_discounts': :'',
-        'custom': :''
+        'id': :'Object',
+        'version': :'Object',
+        'created_at': :'Object',
+        'last_modified_at': :'Object',
+        'key': :'Object',
+        'last_modified_by': :'Object',
+        'created_by': :'Object',
+        'quote_request_state': :'Object',
+        'comment': :'Object',
+        'customer': :'Object',
+        'customer_group': :'Object',
+        'store': :'Object',
+        'line_items': :'Object',
+        'custom_line_items': :'Object',
+        'total_price': :'Object',
+        'taxed_price': :'Object',
+        'shipping_address': :'Object',
+        'billing_address': :'Object',
+        'inventory_mode': :'Object',
+        'tax_mode': :'Object',
+        'tax_rounding_mode': :'Object',
+        'tax_calculation_mode': :'Object',
+        'country': :'Object',
+        'shipping_info': :'Object',
+        'payment_info': :'Object',
+        'shipping_rate_input': :'Object',
+        'item_shipping_addresses': :'Object',
+        'direct_discounts': :'Object',
+        'custom': :'Object'
       }
     end
 
@@ -434,7 +434,7 @@ module CommercetoolsSdk
     # Returns the object in the form of hash
     # @return [Hash] Returns the object in the form of hash
     def to_hash
-      hash = super
+      hash = {}
       self.class.attribute_map.each_pair do |attr, param|
         value = self.send(attr)
         if value.nil?

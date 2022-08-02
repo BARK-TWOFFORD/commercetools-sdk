@@ -71,23 +71,23 @@ module CommercetoolsSdk
     # Attribute type mapping.
     def self.openapi_types
       {
-        'id': :'',
-        'version': :'',
-        'created_at': :'',
-        'last_modified_at': :'',
-        'last_modified_by': :'',
-        'created_by': :'',
-        'sequence_number': :'',
-        'resource': :'',
-        'resource_version': :'',
-        'type': :'',
-        'resource_user_provided_identifiers': :'',
-        'old_state': :'',
-        'new_state': :'',
-        'old_included_in_statistics': :'',
-        'new_included_in_statistics': :'',
-        'target': :'',
-        'force': :''
+        'id': :'Object',
+        'version': :'Object',
+        'created_at': :'Object',
+        'last_modified_at': :'Object',
+        'last_modified_by': :'Object',
+        'created_by': :'Object',
+        'sequence_number': :'Object',
+        'resource': :'Object',
+        'resource_version': :'Object',
+        'type': :'Object',
+        'resource_user_provided_identifiers': :'Object',
+        'old_state': :'Object',
+        'new_state': :'Object',
+        'old_included_in_statistics': :'Object',
+        'new_included_in_statistics': :'Object',
+        'target': :'Object',
+        'force': :'Object'
       }
     end
 
@@ -318,7 +318,7 @@ module CommercetoolsSdk
     # Returns the object in the form of hash
     # @return [Hash] Returns the object in the form of hash
     def to_hash
-      hash = super
+      hash = {}
       self.class.attribute_map.each_pair do |attr, param|
         value = self.send(attr)
         if value.nil?
