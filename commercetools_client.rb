@@ -18,39 +18,39 @@ class CommercetoolsClient
     @api = api
   end
 
+  def update_order_tracking_information(shipment)
+    order_id = shipment.order.id
+    tracking_id = shipment.tracking_number
+    carrier = shipment.warehouse_data["carrier_code"]
+    tracking_data = tracking_data(tracking_id, carrier)
+    parcel = parcel(tracking_data)
+    actions = [add_delivery_action(parcel), change_shipment_state_action("Shipped")]
+    update_order(order_id, actions)
+  end
+
   def update_order(order_id, actions)
     actions = [actions] unless actions.is_a?(Array)
     version = get_order(order_id).version
     body = CommercetoolsSdk::OrderUpdate.new(version: version, actions: actions)
     opts = { body: body }
-    @api.by_project_key_orders_by_id_post("bark-sandbox", order_id, opts)
+    @api.by_project_key_orders_by_id_post(ENV["COMMERCETOOLS_PROJECT_KEY"], order_id, opts)
   end
 
   def get_order(order_id)
-    @api.by_project_key_orders_by_id_get("bark-sandbox", order_id)
-  end
-
-  def line_item(id, name, quantity)
-    CommercetoolsSdk::LineItem.new(id: id, name: name, quantity: quantity)
+    @api.by_project_key_orders_by_id_get(ENV["COMMERCETOOLS_PROJECT_KEY"], order_id)
   end
 
   def tracking_data(tracking_id, carrier)
     CommercetoolsSdk::TrackingData.new(tracking_id: tracking_id, carrier: carrier)
   end
 
-  def parcel(tracking_data, line_items)
-    line_items = [line_items] unless line_items.is_a?(Array)
-    CommercetoolsSdk::Parcel.new(tracking_data: tracking_data, line_items: line_items)
+  def parcel(tracking_data)
+    CommercetoolsSdk::Parcel.new(tracking_data: tracking_data)
   end
 
-  def address(country, street_name, street_number, postal_code, city, state)
-    CommercetoolsSdk::Address.new(country: country, street_name: street_name, street_number: street_number, postal_code: postal_code, city: city, state: state)
-  end
-
-  def add_delivery_action(line_itemss, address, parcels)
-    line_items = [line_items] unless line_items.is_a?(Array)
+  def add_delivery_action(parcels)
     parcels = [parcels] unless parcels.is_a?(Array)
-    CommercetoolsSdk::OrderAddDeliveryAction.new(action: "addDelivery", items: line_items, parcels: parcels)
+    CommercetoolsSdk::OrderAddDeliveryAction.new(action: "addDelivery", parcels: parcels)
   end
 
   def change_shipment_state_action(shipment_state)
