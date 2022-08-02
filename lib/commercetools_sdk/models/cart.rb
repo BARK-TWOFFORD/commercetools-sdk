@@ -128,42 +128,42 @@ module CommercetoolsSdk
     # Attribute type mapping.
     def self.openapi_types
       {
-        'id': :'',
-        'version': :'',
-        'created_at': :'',
-        'last_modified_at': :'',
-        'key': :'',
-        'last_modified_by': :'',
-        'created_by': :'',
-        'customer_id': :'',
-        'customer_email': :'',
-        'anonymous_id': :'',
-        'store': :'',
-        'line_items': :'',
-        'custom_line_items': :'',
-        'total_price': :'',
-        'taxed_price': :'',
-        'cart_state': :'',
-        'shipping_address': :'',
-        'billing_address': :'',
-        'inventory_mode': :'',
-        'tax_mode': :'',
-        'tax_rounding_mode': :'',
-        'tax_calculation_mode': :'',
-        'customer_group': :'',
-        'country': :'',
-        'shipping_info': :'',
-        'discount_codes': :'',
-        'direct_discounts': :'',
-        'custom': :'',
-        'payment_info': :'',
-        'locale': :'',
-        'delete_days_after_last_modification': :'',
-        'refused_gifts': :'',
-        'origin': :'',
-        'shipping_rate_input': :'',
-        'item_shipping_addresses': :'',
-        'total_line_item_quantity': :''
+        'id': :'Object',
+        'version': :'Object',
+        'created_at': :'Object',
+        'last_modified_at': :'Object',
+        'key': :'Object',
+        'last_modified_by': :'Object',
+        'created_by': :'Object',
+        'customer_id': :'Object',
+        'customer_email': :'Object',
+        'anonymous_id': :'Object',
+        'store': :'Object',
+        'line_items': :'Object',
+        'custom_line_items': :'Object',
+        'total_price': :'Object',
+        'taxed_price': :'Object',
+        'cart_state': :'Object',
+        'shipping_address': :'Object',
+        'billing_address': :'Object',
+        'inventory_mode': :'Object',
+        'tax_mode': :'Object',
+        'tax_rounding_mode': :'Object',
+        'tax_calculation_mode': :'Object',
+        'customer_group': :'Object',
+        'country': :'Object',
+        'shipping_info': :'Object',
+        'discount_codes': :'Object',
+        'direct_discounts': :'Object',
+        'custom': :'Object',
+        'payment_info': :'Object',
+        'locale': :'Object',
+        'delete_days_after_last_modification': :'Object',
+        'refused_gifts': :'Object',
+        'origin': :'Object',
+        'shipping_rate_input': :'Object',
+        'item_shipping_addresses': :'Object',
+        'total_line_item_quantity': :'Object'
       }
     end
 
@@ -501,7 +501,7 @@ module CommercetoolsSdk
     # Returns the object in the form of hash
     # @return [Hash] Returns the object in the form of hash
     def to_hash
-      hash = super
+      hash = {}
       self.class.attribute_map.each_pair do |attr, param|
         value = self.send(attr)
         if value.nil?

@@ -59,19 +59,19 @@ module CommercetoolsSdk
     # Attribute type mapping.
     def self.openapi_types
       {
-        'action': :'',
-        'custom': :'',
-        'distribution_channel': :'',
-        'external_tax_rate': :'',
-        'product_id': :'',
-        'variant_id': :'',
-        'sku': :'',
-        'quantity': :'',
-        'added_at': :'',
-        'supply_channel': :'',
-        'external_price': :'',
-        'external_total_price': :'',
-        'shipping_details': :''
+        'action': :'Object',
+        'custom': :'Object',
+        'distribution_channel': :'Object',
+        'external_tax_rate': :'Object',
+        'product_id': :'Object',
+        'variant_id': :'Object',
+        'sku': :'Object',
+        'quantity': :'Object',
+        'added_at': :'Object',
+        'supply_channel': :'Object',
+        'external_price': :'Object',
+        'external_total_price': :'Object',
+        'shipping_details': :'Object'
       }
     end
 
@@ -282,7 +282,7 @@ module CommercetoolsSdk
     # Returns the object in the form of hash
     # @return [Hash] Returns the object in the form of hash
     def to_hash
-      hash = super
+      hash = {}
       self.class.attribute_map.each_pair do |attr, param|
         value = self.send(attr)
         if value.nil?

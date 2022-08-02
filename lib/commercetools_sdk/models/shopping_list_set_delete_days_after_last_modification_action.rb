@@ -26,8 +26,8 @@ module CommercetoolsSdk
     # Attribute type mapping.
     def self.openapi_types
       {
-        'action': :'',
-        'delete_days_after_last_modification': :''
+        'action': :'Object',
+        'delete_days_after_last_modification': :'Object'
       }
     end
 
@@ -183,7 +183,7 @@ module CommercetoolsSdk
     # Returns the object in the form of hash
     # @return [Hash] Returns the object in the form of hash
     def to_hash
-      hash = super
+      hash = {}
       self.class.attribute_map.each_pair do |attr, param|
         value = self.send(attr)
         if value.nil?

@@ -83,27 +83,27 @@ module CommercetoolsSdk
     # Attribute type mapping.
     def self.openapi_types
       {
-        'id': :'',
-        'version': :'',
-        'created_at': :'',
-        'last_modified_at': :'',
-        'last_modified_by': :'',
-        'created_by': :'',
-        'customer': :'',
-        'anonymous_id': :'',
-        'external_id': :'',
-        'interface_id': :'',
-        'amount_planned': :'',
-        'amount_authorized': :'',
-        'authorized_until': :'',
-        'amount_paid': :'',
-        'amount_refunded': :'',
-        'payment_method_info': :'',
-        'payment_status': :'',
-        'transactions': :'',
-        'interface_interactions': :'',
-        'custom': :'',
-        'key': :''
+        'id': :'Object',
+        'version': :'Object',
+        'created_at': :'Object',
+        'last_modified_at': :'Object',
+        'last_modified_by': :'Object',
+        'created_by': :'Object',
+        'customer': :'Object',
+        'anonymous_id': :'Object',
+        'external_id': :'Object',
+        'interface_id': :'Object',
+        'amount_planned': :'Object',
+        'amount_authorized': :'Object',
+        'authorized_until': :'Object',
+        'amount_paid': :'Object',
+        'amount_refunded': :'Object',
+        'payment_method_info': :'Object',
+        'payment_status': :'Object',
+        'transactions': :'Object',
+        'interface_interactions': :'Object',
+        'custom': :'Object',
+        'key': :'Object'
       }
     end
 
@@ -358,7 +358,7 @@ module CommercetoolsSdk
     # Returns the object in the form of hash
     # @return [Hash] Returns the object in the form of hash
     def to_hash
-      hash = super
+      hash = {}
       self.class.attribute_map.each_pair do |attr, param|
         value = self.send(attr)
         if value.nil?

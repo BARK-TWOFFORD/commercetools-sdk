@@ -71,23 +71,23 @@ module CommercetoolsSdk
     # Attribute type mapping.
     def self.openapi_types
       {
-        'id': :'',
-        'version': :'',
-        'created_at': :'',
-        'last_modified_at': :'',
-        'last_modified_by': :'',
-        'created_by': :'',
-        'key': :'',
-        'sku': :'',
-        'value': :'',
-        'country': :'',
-        'customer_group': :'',
-        'channel': :'',
-        'valid_from': :'',
-        'valid_until': :'',
-        'tiers': :'',
-        'discounted': :'',
-        'custom': :''
+        'id': :'Object',
+        'version': :'Object',
+        'created_at': :'Object',
+        'last_modified_at': :'Object',
+        'last_modified_by': :'Object',
+        'created_by': :'Object',
+        'key': :'Object',
+        'sku': :'Object',
+        'value': :'Object',
+        'country': :'Object',
+        'customer_group': :'Object',
+        'channel': :'Object',
+        'valid_from': :'Object',
+        'valid_until': :'Object',
+        'tiers': :'Object',
+        'discounted': :'Object',
+        'custom': :'Object'
       }
     end
 
@@ -320,7 +320,7 @@ module CommercetoolsSdk
     # Returns the object in the form of hash
     # @return [Hash] Returns the object in the form of hash
     def to_hash
-      hash = super
+      hash = {}
       self.class.attribute_map.each_pair do |attr, param|
         value = self.send(attr)
         if value.nil?

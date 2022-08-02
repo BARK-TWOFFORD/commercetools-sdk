@@ -80,26 +80,26 @@ module CommercetoolsSdk
     # Attribute type mapping.
     def self.openapi_types
       {
-        'id': :'',
-        'version': :'',
-        'created_at': :'',
-        'last_modified_at': :'',
-        'last_modified_by': :'',
-        'created_by': :'',
-        'name': :'',
-        'description': :'',
-        'code': :'',
-        'cart_discounts': :'',
-        'cart_predicate': :'',
-        'is_active': :'',
-        'references': :'',
-        'max_applications': :'',
-        'max_applications_per_customer': :'',
-        'custom': :'',
-        'groups': :'',
-        'valid_from': :'',
-        'valid_until': :'',
-        'application_version': :''
+        'id': :'Object',
+        'version': :'Object',
+        'created_at': :'Object',
+        'last_modified_at': :'Object',
+        'last_modified_by': :'Object',
+        'created_by': :'Object',
+        'name': :'Object',
+        'description': :'Object',
+        'code': :'Object',
+        'cart_discounts': :'Object',
+        'cart_predicate': :'Object',
+        'is_active': :'Object',
+        'references': :'Object',
+        'max_applications': :'Object',
+        'max_applications_per_customer': :'Object',
+        'custom': :'Object',
+        'groups': :'Object',
+        'valid_from': :'Object',
+        'valid_until': :'Object',
+        'application_version': :'Object'
       }
     end
 
@@ -351,7 +351,7 @@ module CommercetoolsSdk
     # Returns the object in the form of hash
     # @return [Hash] Returns the object in the form of hash
     def to_hash
-      hash = super
+      hash = {}
       self.class.attribute_map.each_pair do |attr, param|
         value = self.send(attr)
         if value.nil?

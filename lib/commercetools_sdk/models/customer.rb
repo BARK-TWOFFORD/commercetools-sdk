@@ -110,36 +110,36 @@ module CommercetoolsSdk
     # Attribute type mapping.
     def self.openapi_types
       {
-        'id': :'',
-        'version': :'',
-        'created_at': :'',
-        'last_modified_at': :'',
-        'last_modified_by': :'',
-        'created_by': :'',
-        'customer_number': :'',
-        'email': :'',
-        'password': :'',
-        'first_name': :'',
-        'last_name': :'',
-        'middle_name': :'',
-        'title': :'',
-        'date_of_birth': :'',
-        'company_name': :'',
-        'vat_id': :'',
-        'addresses': :'',
-        'default_shipping_address_id': :'',
-        'shipping_address_ids': :'',
-        'default_billing_address_id': :'',
-        'billing_address_ids': :'',
-        'is_email_verified': :'',
-        'external_id': :'',
-        'customer_group': :'',
-        'custom': :'',
-        'locale': :'',
-        'salutation': :'',
-        'key': :'',
-        'stores': :'',
-        'authentication_mode': :''
+        'id': :'Object',
+        'version': :'Object',
+        'created_at': :'Object',
+        'last_modified_at': :'Object',
+        'last_modified_by': :'Object',
+        'created_by': :'Object',
+        'customer_number': :'Object',
+        'email': :'Object',
+        'password': :'Object',
+        'first_name': :'Object',
+        'last_name': :'Object',
+        'middle_name': :'Object',
+        'title': :'Object',
+        'date_of_birth': :'Object',
+        'company_name': :'Object',
+        'vat_id': :'Object',
+        'addresses': :'Object',
+        'default_shipping_address_id': :'Object',
+        'shipping_address_ids': :'Object',
+        'default_billing_address_id': :'Object',
+        'billing_address_ids': :'Object',
+        'is_email_verified': :'Object',
+        'external_id': :'Object',
+        'customer_group': :'Object',
+        'custom': :'Object',
+        'locale': :'Object',
+        'salutation': :'Object',
+        'key': :'Object',
+        'stores': :'Object',
+        'authentication_mode': :'Object'
       }
     end
 
@@ -443,7 +443,7 @@ module CommercetoolsSdk
     # Returns the object in the form of hash
     # @return [Hash] Returns the object in the form of hash
     def to_hash
-      hash = super
+      hash = {}
       self.class.attribute_map.each_pair do |attr, param|
         value = self.send(attr)
         if value.nil?
